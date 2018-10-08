@@ -24,7 +24,7 @@ class App extends Component {
       <div onClick={this.totalClick.bind(this)} className="App">
       <h1>Total Clicks: {this.state.totalcount}</h1>
         <h1>Clicks on Target: {this.state.count}</h1>
-        <h3> Clicks on Target: {((this.state.count/this.state.totalcount)*100)}</h3>
+        <h3> Clicks on Target: {Math.round(((this.state.count/this.state.totalcount)*100)* 100) / 100}</h3>
         <img onClick={this.countClick.bind(this)} src={object} />
       </div>
     );
